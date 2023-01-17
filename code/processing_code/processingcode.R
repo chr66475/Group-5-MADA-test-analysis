@@ -20,7 +20,7 @@ library(here) #to set paths
 ## ---- loaddata --------
 #path to data
 #note the use of the here() package and not absolute paths
-data_location <- here::here("data","raw_data","exampledata.xlsx")
+data_location <- here::here("data","raw_data","exampledata2.xlsx")
 
 #load data. 
 #note that for functions that come from specific packages (instead of base R)
@@ -47,6 +47,8 @@ skimr::skim(rawdata)
 # height (seems like it's in centimeters) 
 # weight (seems to be in kilogram)
 # Sex
+# Num_Books
+# Fav_Genre
 
 
 
@@ -134,6 +136,4 @@ saveRDS(processeddata, file = save_data_location)
 # If you do CSV, you might want to write down somewhere what each variable is.
 # See here for some suggestions on how to store your processed data:
 # http://www.sthda.com/english/wiki/saving-data-into-r-data-format-rds-and-rdata
-
-
 

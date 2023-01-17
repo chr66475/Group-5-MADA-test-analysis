@@ -59,6 +59,8 @@ Looks like we have the following data:
 * height (seems like it's in centimeters) 
 * weight (seems to be in kilogram)
 * Sex
+* Num_Books
+* Fav_Genre
 
 
 # Cleaning
