@@ -53,4 +53,14 @@ print(lmtable2)
 table_file2 = here("results", "resulttable2.rds")
 saveRDS(lmtable2, file = table_file2)
 
-  
+# boxplot with the new categorical variable on the x-axis, and height on the y-axis
+p1 <- mydata %>% ggplot(aes(x=Fav_Genre, y=Height)) + geom_boxplot()
+plot(p1)
+figure_file = here("results","favgenre_height.png")
+ggsave(filename = figure_file, plot=p1) 
+
+# scatterplot with weight on the x-axis and the new numerical variable on the y-axis
+p2 <- mydata %>% ggplot(aes(x=Weight, y=Num_Books)) + geom_point() + geom_smooth(method='lm')
+plot(p2)
+figure_file = here("results","weight_numbooks.png")
+ggsave(filename = figure_file, plot=p2) 
